@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-200;
+}
+
+.main-body {
+  @apply border-r-2;
+  @apply border-opacity-50;
+  @apply border-b-slate-400;
+  @apply pr-8;
+  @apply pt-4;
+  flex: 2;
+}
