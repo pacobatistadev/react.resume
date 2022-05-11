@@ -2,7 +2,7 @@
   "name": "node.resume",
   "private": true,
   "version": "0.0.0",
-  "homepage": "me.pacobatista.dev",
+  "homepage": "https://me.pacobatista.dev",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
