@@ -4,10 +4,15 @@ import Section from "./components/Section";
 import HistoryEntry from "./components/HistoryEntry";
 import ReferenceEntry from "./components/ReferenceEntry";
 import { MdEmail, MdPhone } from "react-icons/md";
-
-import referenceData from "./referenceData";
-
-import profile from "./assets/profile.jpeg";
+import { AiFillLinkedin } from "react-icons/ai";
+import referenceData from "./data/referenceData";
+import Skill from "./components/Skill";
+import skillsData from "./data/skillsData";
+import languagesData from "./data/languagesData";
+import Header from "./components/Header";
+import Contact from "./components/Contact";
+import personalData from "./data/personalData";
+import profile from "./assets/profile.jpg";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -29,10 +34,10 @@ function App() {
           />
           <div className="flex flex-col content-start items-start">
             <h1 className="font-sans text-4xl text-white font-bold italic pb-4">
-              Francisco Batista
+              {personalData.name}
             </h1>
             <h2 className="font-sans text-xs text-white tracking-widest italic uppercase">
-              Fullstack Developer
+              {t(personalData.title)}
             </h2>
           </div>
         </header>
@@ -40,14 +45,13 @@ function App() {
           <div className="py-4 flex items-center border-b-2 border-opacity-50 border-b-slate-400">
             <div className="flex flex-row text-xs">
               <div className="flex flex-row items-center mr-8">
-                <MdEmail className="mr-2 text-blue-700" />
-                <a href="mailto:fbatista.fxbi@gmail.com">
-                  fbatista.fxbi@gmail.com
-                </a>
+                <Contact type="email" value={personalData.email} />
               </div>
               <div className="flex flex-row items-center mr-8 ">
-                <MdPhone className="mr-2 text-blue-700 " />
-                <a href="tel:+523121196780">3121196780</a>
+                <Contact type="tel" value={personalData.tel} />
+              </div>
+              <div className="flex flex-row items-center mr-8 ">
+                <Contact type="linkedin" value={personalData.linkedin} />
               </div>
             </div>
           </div>
@@ -68,16 +72,20 @@ function App() {
               </Section>
               <Section section="references">
                 {referenceData.map((data, index) => (
-                  <ReferenceEntry
-                    key={index}
-                    {...data}
-                  />
+                  <ReferenceEntry key={index} {...data} />
                 ))}
               </Section>
             </main>
             <div className="flex-1 pl-8 pt-4">
               <Section section="skills">
-
+                {skillsData.map((data, index) => (
+                  <Skill key={index} {...data} />
+                ))}
+              </Section>
+              <Section section="languages">
+                {languagesData.map((data, index) => (
+                  <Skill translate key={index} {...data} />
+                ))}
               </Section>
             </div>
           </div>

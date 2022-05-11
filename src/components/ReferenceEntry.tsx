@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
+import Contact from './Contact';
 import { MdEmail, MdPhone } from "react-icons/md";
 import { AiFillLinkedin } from "react-icons/ai";
 
@@ -20,25 +21,12 @@ const ReferenceEntry: FC<ReferenceEntryProps> = (props) => {
         {props.name} {t("references.from")} {props.company}
       </h4>
       <div className="mt-1 text-xs flex flex-row items-center">
-        <MdEmail className="mr-1 text-blue-700" />
-        <a className="mr-4" href={`mailto:${props.email}`}>
-          {props.email}
-        </a>
+        <Contact type="email" value={props.email}/>
         {props.tel && (
-          <>
-            <MdPhone className="mr-1 text-blue-700 " />
-            <a className="mr-4" href={`tel:+52${props.tel}`}>
-              {props.tel}
-            </a>
-          </>
+          <Contact type="tel" value={props.tel} />
         )}
         {props.linkedin && (
-          <>
-            <AiFillLinkedin className="mr-1 text-blue-700 " />
-            <a className="mr-4" href={props.linkedin}>
-              {t('references.linkedin')}
-            </a>
-          </>
+          <Contact type="linkedin" value={props.linkedin} />
         )}
       </div>
     </div>

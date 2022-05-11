@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useTranslation } from "react-i18next";
 
 type SectionProps = {
-  section: 'profile' | 'job' | 'education' | 'references' | 'skills'
+  section: 'profile' | 'job' | 'education' | 'references' | 'skills' | 'languages'
   children?: React.ReactNode
 }
 

@@ -1,7 +1,11 @@
 const en = {
   default: {
     misc: {
-      wip: 'Work in progress'
+      wip: 'Work in progress',
+      linkedin: 'Linkedin Profile'
+    },
+    header: {
+      title: 'Fullstack developer',
     },
     profile: {
       title: 'Profile',
@@ -67,6 +71,11 @@ const en = {
     },
     skills: {
       title: 'Skills',
+    },
+    languages: {
+      title: 'Languages',
+      en: 'English',
+      es: 'Spanish',
     }
   }
 }
