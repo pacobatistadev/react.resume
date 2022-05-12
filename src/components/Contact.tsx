@@ -10,7 +10,7 @@ type ContactProps = {
 };
 
 const Contact: FC<ContactProps> = (props) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const hrefValue = useMemo(() => {
     switch (props.type) {
@@ -29,7 +29,7 @@ const Contact: FC<ContactProps> = (props) => {
     }
 
     return props.value;
-  }, [props.type, props.value]);
+  }, [props.type, props.value, i18n.language]);
 
   return (
     <>
@@ -38,7 +38,7 @@ const Contact: FC<ContactProps> = (props) => {
       {props.type === "linkedin" && (
         <AiFillLinkedin className="mr-1 text-blue-700 " />
       )}
-      <a className="mr-4" href={hrefValue}>
+      <a className="mr-4" href={hrefValue} target='_blank'>
         {displayValue}
       </a>
     </>

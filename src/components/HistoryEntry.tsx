@@ -11,7 +11,7 @@ const HistoryEntry: FC<HistoryEntryProps> = ({ type, place }) => {
 
   const responsabilities = useMemo(() => {
     return (
-      i18n.getResource("en", "default", `${type}.${place}.responsabilities`) ?? []
+      i18n.getResource(i18n.language, "default", `${type}.${place}.responsabilities`) ?? []
     );
   }, [type, place, i18n.language]);
 

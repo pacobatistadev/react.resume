@@ -13,6 +13,7 @@ import Header from "./components/Header";
 import Contact from "./components/Contact";
 import personalData from "./data/personalData";
 import profile from "./assets/profile.jpg";
+import LanguageSelector from "./components/LanguageSelector";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -22,9 +23,12 @@ function App() {
   };
 
   return (
-    <div>
-      <div className=" bg-slate-50 container mx-auto max-w-5xl shadow-lg min-h-screen">
-        <header className="bg-blue-700 px-16 py-14 flex flex-row shadow">
+    <div className="py-4">
+      <div className="fixed right-0 flex flex-col mr-4">
+        <LanguageSelector />
+      </div>
+      <div className=" bg-slate-50 container mx-auto max-w-5xl shadow-lg min-h-screen rounded-xl">
+        <header className="bg-blue-700 px-16 py-14 flex flex-row shadow rounded-t-xl">
           <img
             height={75}
             width={75}

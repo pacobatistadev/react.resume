@@ -2,7 +2,12 @@ const en = {
   default: {
     misc: {
       wip: 'Work in progress',
-      linkedin: 'Linkedin Profile'
+      linkedin: 'Linkedin Profile',
+      language_selector: {
+        change_to: 'Change to',
+        es: '🇲🇽',
+        en: '🇺🇸',
+      }
     },
     header: {
       title: 'Fullstack developer',
@@ -46,7 +51,7 @@ const en = {
         company: 'Infomátika Consultoría Virtual',
         timespan: '2014 - 2018',
         responsabilities: [
-          'Develop Ad-hoc systems using CONTPAQi APIs.',
+          'Integraton development for CONTPAQi software',
           'Maintenance on CONTPAQi software for several companies',
         ],
       },
@@ -67,7 +72,6 @@ const en = {
     references: {
       title: 'References',
       from: 'from',
-      linkedin: 'Linkedin profile'
     },
     skills: {
       title: 'Skills',
