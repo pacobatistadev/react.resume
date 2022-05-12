@@ -5,7 +5,6 @@ const LanguageSelector: FC = () => {
   const { t, i18n } = useTranslation()
 
   const targetLang = useMemo(() => {
-    console.log(i18n.language)
     if (i18n.language === 'en') return 'es'
     return 'en'
   }, [i18n.language])
