@@ -7,6 +7,9 @@ const en = {
         change_to: 'Change to',
         es: '🇲🇽',
         en: '🇺🇸',
+      },
+      download: {
+        print: 'Print resume'
       }
     },
     header: {

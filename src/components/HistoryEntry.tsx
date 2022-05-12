@@ -18,8 +18,8 @@ const HistoryEntry: FC<HistoryEntryProps> = ({ type, place }) => {
   return (
     <div className="mb-4">
       <div className="mb-2">
-        <h4 className="text-justify leading-3">{t(`${type}.${place}.title`)} @ {t(`${type}.${place}.company`)}</h4>
-        <span className="text-xs text-gray-400">
+        <h4 className="text-justify">{t(`${type}.${place}.title`)} @ {t(`${type}.${place}.company`)}</h4>
+        <span className="text-xs text-gray-400 -translate-y-1 inline-block">
           {t(`${type}.${place}.timespan`)}
         </span>
       </div>

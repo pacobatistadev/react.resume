@@ -15,8 +15,13 @@ const LanguageSelector: FC = () => {
   }, [targetLang, i18n.changeLanguage])
 
   return (
-    <button className='text-slate-800 opacity-20 hover:opacity-100 transition-opacity' onClick={changeLang}>
-      {t('misc.language_selector.change_to')} {t(`misc.language_selector.${targetLang}`)}
+    <button className='text-slate-800 flex flex-row justify-end items-center gap-2 hover-opacity-controls' onClick={changeLang}>
+      <span className='opacity-0 transition-opacity'>
+        {t('misc.language_selector.change_to')}
+      </span>
+      <span>
+        {t(`misc.language_selector.${targetLang}`)}
+      </span>
     </button>
   )
 }

@@ -32,7 +32,7 @@ const Contact: FC<ContactProps> = (props) => {
   }, [props.type, props.value, i18n.language]);
 
   return (
-    <>
+    <div className="flex flex-row items-center">
       {props.type === "tel" && <MdPhone className="mr-1 text-blue-700 " />}
       {props.type === "email" && <MdEmail className="mr-1 text-blue-700 " />}
       {props.type === "linkedin" && (
@@ -41,7 +41,7 @@ const Contact: FC<ContactProps> = (props) => {
       <a className="mr-4" href={hrefValue} target='_blank'>
         {displayValue}
       </a>
-    </>
+    </div>
   );
 };
 

@@ -6,13 +6,102 @@ body {
   @apply bg-slate-200;
 }
 
+.main-container {
+  @apply bg-slate-50;
+  @apply container;
+  @apply mx-auto;
+  @apply max-w-5xl;
+  @apply shadow-none;
+  @apply min-h-screen;
+  @apply rounded-none;
+
+  @apply lg:shadow-lg;
+  @apply lg:rounded-xl;
+
+  @apply print:rounded-none;
+  @apply print:h-full;
+  @apply print:shadow-none;
+}
+
+.header {
+  @apply grid;
+  @apply grid-cols-12;
+  @apply bg-blue-700;
+  @apply px-16;
+  @apply py-14;
+  @apply shadow;
+  @apply rounded-none;
+
+  @apply lg:rounded-t-xl;
+
+  @apply print:rounded-none;
+}
+
+.profile-pic {
+  @apply col-span-12;
+  @apply shadow-md;
+  @apply justify-self-center;
+  @apply mb-2;
+  border-radius: 100%;
+  height: 75px;
+  width: 75px;
+
+  @apply sm:justify-self-start;
+  @apply sm:mb-0;
+  @apply sm:col-span-2;
+
+  @apply print:justify-self-start;
+  @apply print:mb-0;
+  @apply print:col-span-2;
+}
+
+.name {
+  @apply col-span-12;
+  @apply justify-self-center;
+  @apply justify-center;
+  @apply items-center;
+  @apply text-center;
+  @apply flex;
+  @apply flex-col;
+
+  @apply sm:col-span-10;
+  @apply sm:justify-start;
+  @apply sm:items-start;
+  @apply sm:justify-self-start;
+
+  @apply print:col-span-10;
+  @apply print:justify-start;
+  @apply print:items-start;
+  @apply print:justify-self-start;
+}
+
 .main-body {
-  @apply border-r-2;
-  @apply border-opacity-50;
-  @apply border-b-slate-400;
-  @apply pr-8;
+  @apply col-span-3;
+  @apply border-r-0;
+  @apply pr-0;
   @apply pt-4;
-  flex: 2;
+
+  @apply md:col-span-2;
+  @apply md:border-r-2;
+  @apply md:border-opacity-50;
+  @apply md:border-b-slate-400;
+  @apply md:pr-8;
+
+  @apply print:col-span-2;
+  @apply print:border-r-2;
+  @apply print:border-opacity-50;
+  @apply print:border-b-slate-400;
+  @apply print:pr-8;
+}
+
+.hover-opacity-controls {
+  @apply opacity-20;
+  @apply hover:opacity-100;
+  @apply transition-opacity;
+}
+
+.hover-opacity-controls:hover > span {
+  @apply opacity-100;
 }
 
 .skill-meter-container {

@@ -7,6 +7,9 @@ const es = {
         change_to: 'Cambiar a',
         es: '🇲🇽',
         en: '🇺🇸',
+      },
+      download: {
+        print: 'Imprimir CV'
       }
     },
     header: {
